@@ -66,3 +66,4 @@ D:\Desktop\GIT\MainWindow\메인창\메인창\obj\Debug\메인창.csproj.Generat
 D:\Desktop\GIT\MainWindow\메인창\메인창\obj\Debug\메인창.csproj.CoreCompileInputs.cache
 D:\Desktop\GIT\MainWindow\메인창\메인창\obj\Debug\메인창.exe
 D:\Desktop\GIT\MainWindow\메인창\메인창\obj\Debug\메인창.pdb
+D:\Desktop\GIT\MainWindow\메인창\메인창\obj\Debug\메인창.csprojAssemblyReference.cache
