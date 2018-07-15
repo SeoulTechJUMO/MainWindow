@@ -23,43 +23,12 @@ namespace 메인창
     /// MainWindow.xaml에 대한 상호 작용 논리
     /// </summary>
     public partial class MainMenu : Window
-    {      
-        double orginalWidth, originalHeight;
-
-        ScaleTransform scale = new ScaleTransform();
+    {
 
         public MainMenu()
         {
             InitializeComponent();
-            this.Loaded += new RoutedEventHandler(Window1_Loaded);
-        }
-
-        void Window1_SizeChanged(object sender, SizeChangedEventArgs e)
-        {
-            ChangeSize(e.NewSize.Width, e.NewSize.Height);
-        }
-
-        void Window1_Loaded(object sender, RoutedEventArgs e)
-        {
-            orginalWidth = this.Width;
-            originalHeight = this.Height;
-
-            if (this.WindowState == WindowState.Maximized)
-            {
-                ChangeSize(this.ActualWidth, this.ActualHeight);
-            }
-            this.SizeChanged += new SizeChangedEventHandler(Window1_SizeChanged);
-            
-        }
-
-        private void ChangeSize(double width, double height)
-        {
-            scale.ScaleX = width / orginalWidth;
-            scale.ScaleY = height / originalHeight;
-
-            FrameworkElement rootElement = this.Content as FrameworkElement;
-
-            rootElement.LayoutTransform = scale;
+         
         }
 
         private void PlayListOpen_Click(object sender, RoutedEventArgs e)
@@ -81,6 +50,7 @@ namespace 메인창
 
             }
         }
+
 
         private void Setting_Click(object sender, RoutedEventArgs e)
         {

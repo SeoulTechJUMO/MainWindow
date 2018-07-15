@@ -40,3 +40,30 @@ D:\Desktop\캡스톤 디자인\wpf 틀\실전\메인창\repos\메인창\메인�
 D:\Desktop\캡스톤 디자인\wpf 틀\실전\메인창\repos\메인창\메인창\obj\Debug\SettingWindow.g.cs
 D:\Desktop\캡스톤 디자인\wpf 틀\실전\메인창\repos\메인창\메인창\obj\Debug\SettingWindow.baml
 D:\Desktop\캡스톤 디자인\wpf 틀\실전\메인창\repos\메인창\메인창\obj\Debug\메인창.csprojAssemblyReference.cache
+D:\Desktop\GIT\MainWindow\메인창\메인창\bin\Debug\메인창.exe.config
+D:\Desktop\GIT\MainWindow\메인창\메인창\bin\Debug\메인창.exe
+D:\Desktop\GIT\MainWindow\메인창\메인창\bin\Debug\메인창.pdb
+D:\Desktop\GIT\MainWindow\메인창\메인창\obj\Debug\CodeMagic.g.cs
+D:\Desktop\GIT\MainWindow\메인창\메인창\obj\Debug\MainMenu.g.cs
+D:\Desktop\GIT\MainWindow\메인창\메인창\obj\Debug\Mixser.g.cs
+D:\Desktop\GIT\MainWindow\메인창\메인창\obj\Debug\Patten.g.cs
+D:\Desktop\GIT\MainWindow\메인창\메인창\obj\Debug\PianoRoll.g.cs
+D:\Desktop\GIT\MainWindow\메인창\메인창\obj\Debug\PlayList.g.cs
+D:\Desktop\GIT\MainWindow\메인창\메인창\obj\Debug\SettingWindow.g.cs
+D:\Desktop\GIT\MainWindow\메인창\메인창\obj\Debug\App.g.cs
+D:\Desktop\GIT\MainWindow\메인창\메인창\obj\Debug\메인창_MarkupCompile.cache
+D:\Desktop\GIT\MainWindow\메인창\메인창\obj\Debug\메인창_MarkupCompile.lref
+D:\Desktop\GIT\MainWindow\메인창\메인창\obj\Debug\CodeMagic.baml
+D:\Desktop\GIT\MainWindow\메인창\메인창\obj\Debug\MainMenu.baml
+D:\Desktop\GIT\MainWindow\메인창\메인창\obj\Debug\Mixser.baml
+D:\Desktop\GIT\MainWindow\메인창\메인창\obj\Debug\Patten.baml
+D:\Desktop\GIT\MainWindow\메인창\메인창\obj\Debug\PianoRoll.baml
+D:\Desktop\GIT\MainWindow\메인창\메인창\obj\Debug\PlayList.baml
+D:\Desktop\GIT\MainWindow\메인창\메인창\obj\Debug\SettingWindow.baml
+D:\Desktop\GIT\MainWindow\메인창\메인창\obj\Debug\메인창.g.resources
+D:\Desktop\GIT\MainWindow\메인창\메인창\obj\Debug\메인창.Properties.Resources.resources
+D:\Desktop\GIT\MainWindow\메인창\메인창\obj\Debug\메인창.csproj.GenerateResource.cache
+D:\Desktop\GIT\MainWindow\메인창\메인창\obj\Debug\메인창.csproj.CoreCompileInputs.cache
+D:\Desktop\GIT\MainWindow\메인창\메인창\obj\Debug\메인창.exe
+D:\Desktop\GIT\MainWindow\메인창\메인창\obj\Debug\메인창.pdb
+D:\Desktop\GIT\MainWindow\메인창\메인창\obj\Debug\메인창.csprojAssemblyReference.cache
