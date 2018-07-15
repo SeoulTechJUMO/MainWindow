@@ -23,5 +23,23 @@ namespace 메인창
         {
             InitializeComponent();
         }
+
+        private void Create_Mixser(object sender, RoutedEventArgs e)
+        {
+            Grid grid = new Grid();
+            grid.Width = 146;
+            grid.HorizontalAlignment = HorizontalAlignment.Center;
+            grid.VerticalAlignment = VerticalAlignment.Center;
+
+            TextBlock txt1 = new TextBlock();
+            Double db3 = new double();
+            db3 = 150000;
+            txt1.Text = db3.ToString();
+            
+
+            grid.Children.Add(txt1);
+
+            Mixser_StackPanel.Children.Add(grid);
+        }
     }
 }

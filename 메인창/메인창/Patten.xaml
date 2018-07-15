@@ -6,6 +6,7 @@
         xmlns:local="clr-namespace:메인창"
         mc:Ignorable="d"
         Title="PianoRollForm" Height="450" Width="800">
+
     <Grid>
         <CheckBox Name="activation1" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="36,50,0,0" RenderTransformOrigin="0.5,0.5">
             <CheckBox.RenderTransform>
