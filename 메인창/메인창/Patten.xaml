@@ -5,70 +5,75 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:메인창"
         mc:Ignorable="d"
-        Title="PianoRollForm" Height="450" Width="800">
+        Title="PianoRollForm" Height="470" Width="800">
 
     <Grid>
-        <CheckBox Name="activation1" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="36,50,0,0" RenderTransformOrigin="0.5,0.5">
-            <CheckBox.RenderTransform>
-                <TransformGroup>
-                    <ScaleTransform ScaleX="2" ScaleY="2"/>
-                </TransformGroup>
-            </CheckBox.RenderTransform>
-        </CheckBox>
-        <CheckBox Name="activation2" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="36,125,0,0" RenderTransformOrigin="0.5,0.5">
-            <CheckBox.RenderTransform>
-                <TransformGroup>
-                    <ScaleTransform ScaleX="2" ScaleY="2"/>
-                </TransformGroup>
-            </CheckBox.RenderTransform>
-        </CheckBox>
-        <CheckBox Name="activation3" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="36,200,0,0" RenderTransformOrigin="0.5,0.5">
-            <CheckBox.RenderTransform>
-                <TransformGroup>
-                    <ScaleTransform ScaleY="2" ScaleX="2"/>
-                </TransformGroup>
-            </CheckBox.RenderTransform>
-        </CheckBox>
-        <CheckBox Name="activation4" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="36,275,0,0" RenderTransformOrigin="0.5,0.5">
-            <CheckBox.RenderTransform>
-                <TransformGroup>
-                    <ScaleTransform ScaleX="2" ScaleY="2"/>
-                </TransformGroup>
-            </CheckBox.RenderTransform>
-        </CheckBox>
-        <CheckBox Name="activation5" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="36,350,0,0" RenderTransformOrigin="0.5,0.5">
-            <CheckBox.RenderTransform>
-                <TransformGroup>
-                    <ScaleTransform ScaleX="2" ScaleY="2"/>
-                </TransformGroup>
-            </CheckBox.RenderTransform>
-        </CheckBox>
-        <ComboBox Name="MixerN1" IsEditable="True" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Margin="85,45,0,0"/>
-        <ComboBox Name="MixerN2" IsEditable="True" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Margin="85,121,0,0"/>
-        <ComboBox Name="MixerN3" IsEditable="True" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Margin="85,197,0,0"/>
-        <ComboBox Name="MixerN4" IsEditable="True" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Margin="85,272,0,0"/>
-        <ComboBox Name="MixerN5" IsEditable="True" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Margin="85,347,0,0"/>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition Height="Auto" MinHeight="400"></RowDefinition>
+        </Grid.RowDefinitions>
 
-        <Button Name="VSTbtn1" HorizontalAlignment="Left" VerticalAlignment="Top" Content="Button" Width="120" Height="25" Margin="190,43,0,0"/>
-        <Button Name="VSTbtn2" HorizontalAlignment="Left" VerticalAlignment="Top" Content="Button" Width="120" Height="25" Margin="190,120,0,0"/>
-        <Button Name="VSTbtn3" HorizontalAlignment="Left" VerticalAlignment="Top" Content="VST LOAD" Width="120" Height="25" Margin="190,195,0,0"/>
-        <Button Name="VSTbtn4" HorizontalAlignment="Left" VerticalAlignment="Top" Content="Button" Width="120" Height="25" Margin="190,270,0,0"/>
-        <Button Name="VSTbtn5" HorizontalAlignment="Left" VerticalAlignment="Top" Content="Button" Width="120" Height="25" Margin="190,345,0,0"/>
+        <Button Content="패턴추가" Width="70" Height="30" Click="Create_Patten"></Button>
 
-        <Button HorizontalAlignment="Left" Height="57" VerticalAlignment="Top" Width="418" Margin="344,27,0,0" Background="{x:Null}" Click="PianoLoll_Click">
-            <Rectangle Name="rac1" HorizontalAlignment="Left" Height="57" VerticalAlignment="Top" Width="418" Stroke="Black"/>
-        </Button>
-        <Button HorizontalAlignment="Left" Height="57" VerticalAlignment="Top" Width="418" Margin="344,105,0,0" Background="{x:Null}" Click="PianoLoll_Click">
-            <Rectangle Name="rac2" HorizontalAlignment="Left" Height="57" VerticalAlignment="Top" Width="418" Stroke="Black" />
-        </Button>
-        <Button HorizontalAlignment="Left" Height="57" VerticalAlignment="Top" Width="418" Margin="344,180,0,0" Background="{x:Null}" Click="PianoLoll_Click">
-            <Rectangle Name="rac3" HorizontalAlignment="Left" Height="57" Stroke="Black" VerticalAlignment="Top" Width="418"/>
-        </Button>
-        <Button HorizontalAlignment="Left" Height="57" VerticalAlignment="Top" Width="418" Margin="344,254,0,0" Background="{x:Null}" Click="PianoLoll_Click">
-            <Rectangle Name="rac4" HorizontalAlignment="Left" Height="57" Stroke="Black" VerticalAlignment="Top" Width="418" />
-        </Button>
-        <Button HorizontalAlignment="Left" Height="57" VerticalAlignment="Top" Width="418" Margin="344,329,0,0" Background="{x:Null}" Click="PianoLoll_Click">
-            <Rectangle Name="rac5" HorizontalAlignment="Left" Height="57" Stroke="Black" VerticalAlignment="Top" Width="418" />
-        </Button>
+        <Grid Grid.Row="1">
+            <ScrollViewer Height="400">
+            <StackPanel Name="Patten_StackPanel">
+                <Grid Height="80">
+                    <CheckBox HorizontalAlignment="Left" VerticalAlignment="Top"  Height="15" Width="16" Margin="28,26,0,0">
+                        <CheckBox.RenderTransform>
+                            <ScaleTransform ScaleX="2" ScaleY="2"/>
+                        </CheckBox.RenderTransform>
+                    </CheckBox>
+                    <ComboBox IsEditable="True" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Height="22" Margin="86,30,0,0"/>
+                    <Button HorizontalAlignment="Left" VerticalAlignment="Top" Content="Button" Width="120" Height="25" Margin="190,28,0,0" />
+                    <Button HorizontalAlignment="Left" Height="57" VerticalAlignment="Top" Width="418" Margin="344,11,0,0" Background="{x:Null}" Click="PianoLoll_Click" ></Button>
+                </Grid>
+
+                <Grid Height="80">
+                    <CheckBox HorizontalAlignment="Left" VerticalAlignment="Top"  Height="15" Width="16" Margin="28,26,0,0">
+                        <CheckBox.RenderTransform>
+                            <ScaleTransform ScaleX="2" ScaleY="2"/>
+                        </CheckBox.RenderTransform>
+                    </CheckBox>
+                    <ComboBox IsEditable="True" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Height="22" Margin="86,30,0,0"/>
+                    <Button HorizontalAlignment="Left" VerticalAlignment="Top" Content="Button" Width="120" Height="25" Margin="190,28,0,0" />
+                    <Button HorizontalAlignment="Left" Height="57" VerticalAlignment="Top" Width="418" Margin="344,11,0,0" Background="{x:Null}" Click="PianoLoll_Click" ></Button>
+                </Grid>
+
+                <Grid Height="80">
+                    <CheckBox HorizontalAlignment="Left" VerticalAlignment="Top"  Height="15" Width="16" Margin="28,26,0,0">
+                        <CheckBox.RenderTransform>
+                            <ScaleTransform ScaleX="2" ScaleY="2"/>
+                        </CheckBox.RenderTransform>
+                    </CheckBox>
+                    <ComboBox IsEditable="True" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Height="22" Margin="86,30,0,0"/>
+                    <Button HorizontalAlignment="Left" VerticalAlignment="Top" Content="Button" Width="120" Height="25" Margin="190,28,0,0" />
+                    <Button HorizontalAlignment="Left" Height="57" VerticalAlignment="Top" Width="418" Margin="344,11,0,0" Background="{x:Null}" Click="PianoLoll_Click" ></Button>
+                </Grid>
+
+                <Grid Height="80">
+                    <CheckBox HorizontalAlignment="Left" VerticalAlignment="Top"  Height="15" Width="16" Margin="28,26,0,0">
+                        <CheckBox.RenderTransform>
+                            <ScaleTransform ScaleX="2" ScaleY="2"/>
+                        </CheckBox.RenderTransform>
+                    </CheckBox>
+                    <ComboBox IsEditable="True" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Height="22" Margin="86,30,0,0"/>
+                    <Button HorizontalAlignment="Left" VerticalAlignment="Top" Content="Button" Width="120" Height="25" Margin="190,28,0,0" />
+                    <Button HorizontalAlignment="Left" Height="57" VerticalAlignment="Top" Width="418" Margin="344,11,0,0" Background="{x:Null}" Click="PianoLoll_Click" ></Button>
+                </Grid>
+
+                <Grid Height="80">
+                    <CheckBox HorizontalAlignment="Left" VerticalAlignment="Top"  Height="15" Width="16" Margin="28,26,0,0">
+                        <CheckBox.RenderTransform>
+                            <ScaleTransform ScaleX="2" ScaleY="2"/>
+                        </CheckBox.RenderTransform>
+                    </CheckBox>
+                    <ComboBox IsEditable="True" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Height="22" Margin="86,30,0,0"/>
+                    <Button HorizontalAlignment="Left" VerticalAlignment="Top" Content="Button" Width="120" Height="25" Margin="190,28,0,0" />
+                    <Button HorizontalAlignment="Left" Height="57" VerticalAlignment="Top" Width="418" Margin="344,11,0,0" Background="{x:Null}" Click="PianoLoll_Click" ></Button>
+                </Grid>
+            </StackPanel>
+            </ScrollViewer>
+        </Grid>
     </Grid>
 </Window>
