@@ -66,5 +66,15 @@ namespace 메인창
 
             }
         }
+
+        private void Menu1(object sender, RoutedEventArgs e)
+        {
+            Patten winFileOpen = new Patten();
+            winFileOpen.Owner = this;
+            if (winFileOpen.ShowDialog() == true)
+            {
+
+            }
+        }
     }
 }

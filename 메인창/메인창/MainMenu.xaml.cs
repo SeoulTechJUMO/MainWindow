@@ -61,5 +61,15 @@ namespace 메인창
 
             }
         }
+
+        private void Menu1(object sender, RoutedEventArgs e)
+        {
+            Mixser winFileOpen = new Mixser();
+            winFileOpen.Owner = this;
+            if (winFileOpen.ShowDialog() == true)
+            {
+
+            }
+        }
     }
 }

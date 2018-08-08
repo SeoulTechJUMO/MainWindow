@@ -6,8 +6,18 @@
         xmlns:local="clr-namespace:메인창"
         mc:Ignorable="d"
         Title="JUMO Uncomplicated Music Studio" Height="800" Width="1200">
+    <Window.ContextMenu>
+        <ContextMenu x:Name="contextMenue">
+            <MenuItem Header="menu 1" Click="Menu1"/>
+            <MenuItem Header="menu 2"/>
+        </ContextMenu>
+    </Window.ContextMenu>
     <Grid>
-        <StackPanel>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="791*"/>
+            <ColumnDefinition Width="401*"/>
+        </Grid.ColumnDefinitions>
+        <StackPanel Grid.ColumnSpan="2">
             <Menu>
                 <MenuItem Header="파일(F)">
                     <MenuItem Header="저장"/>
@@ -45,6 +55,7 @@
                 </ToolBarTray>
             </StackPanel>
         </StackPanel>
-        <ProgressBar Height="25" Width="100" Margin="10"  HorizontalAlignment="Right" VerticalAlignment="Bottom"/>
+        <ProgressBar Height="25" Width="100" Margin="0,0,10,10"  HorizontalAlignment="Right" VerticalAlignment="Bottom" Grid.Column="1"/>
+
     </Grid>
 </Window>

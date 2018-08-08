@@ -6,6 +6,12 @@
         xmlns:local="clr-namespace:메인창"
         mc:Ignorable="d"
         Title="PlayList" Height="600" Width="1200">
+    <Window.ContextMenu>
+        <ContextMenu x:Name="contextMenue">
+            <MenuItem Header="menu 1" Click="Menu1"/>
+            <MenuItem Header="menu 2"/>
+        </ContextMenu>
+    </Window.ContextMenu>
     <Grid>
         <Grid Margin="0,0,0,507" HorizontalAlignment="Left" Width="1192">
             <TextBlock x:Name="text1" Width="40" Height="20" HorizontalAlignment="Left" ><Run Text="포인터"/></TextBlock>
