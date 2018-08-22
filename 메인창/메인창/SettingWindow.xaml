@@ -5,62 +5,104 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:메인창"
         mc:Ignorable="d"
-        Title="SettingWindow" Height="650" Width="800" Keyboard.KeyDown="Window_Keyvoard_keyDown" KeyDown="Window_KeyDown">
+        Title="SettingWindow" Height="480" Width="640" Keyboard.KeyDown="Window_Keyvoard_keyDown" KeyDown="Window_KeyDown">
     <Grid>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition/>
-            <ColumnDefinition Width="Auto" MinWidth="12"></ColumnDefinition>
-            <ColumnDefinition Width="553"></ColumnDefinition>
+            <ColumnDefinition Width="150"/>
+            <ColumnDefinition />
         </Grid.ColumnDefinitions>
 
-        <Grid Margin="10">
-            <ListBox>
-                <ListBoxItem FontSize="14">프로젝트 정보</ListBoxItem>
-                <ListBoxItem FontSize="14">기본 설정</ListBoxItem>
-                <ListBoxItem FontSize="14">항목1</ListBoxItem>
-                <ListBoxItem FontSize="14">항목2</ListBoxItem>
-                <ListBoxItem FontSize="14">항목3</ListBoxItem>
-            </ListBox>
-        </Grid>
+        <ListBox Grid.Column="0">
+            <ListBoxItem>프로젝트 정보</ListBoxItem>
+            <ListBoxItem>기본 설정</ListBoxItem>
+            <ListBoxItem>항목1</ListBoxItem>
+            <ListBoxItem>항목2</ListBoxItem>
+            <ListBoxItem>항목3</ListBoxItem>
+        </ListBox>
 
-        <GridSplitter Grid.Column="1" Width="11"></GridSplitter>
+        <Grid Grid.Column="1">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="auto" />
+                <RowDefinition />
+                <RowDefinition Height="auto" />
+            </Grid.RowDefinitions>
 
-        <Grid Grid.Column="2" OpacityMask="Black" >
-            <TextBlock x:Name="text1" Width="159" HorizontalAlignment="Left" Margin="14,16,0,571" ><Run Text="프로젝트 정보" FontSize="24" FontWeight="Bold"/></TextBlock>
-            <TextBlock x:Name="text2" Width="51" HorizontalAlignment="Left" Margin="14,82,0,485" FontSize="16" ><Run Text="제목"/></TextBlock>
-            <TextBlock x:Name="text3" Width="51" HorizontalAlignment="Left" Margin="14,134,0,438" FontSize="16" ><Run Text="작곡가"/></TextBlock>
-            <TextBlock x:Name="text4" Width="51" HorizontalAlignment="Left" Margin="14,186,0,383" FontSize="16" ><Run Text="장르"/></TextBlock>
-            <TextBlock x:Name="text5" Width="40" HorizontalAlignment="Left" Margin="14,278,0,276" ><Run Text="설명" FontSize="16"/></TextBlock>
-            <TextBlock x:Name="text6" Width="40" HorizontalAlignment="Left" Margin="14,396,0,175" ><Run Text="템포" FontSize="16"/></TextBlock>
-            <TextBlock x:Name="text7" Width="40" HorizontalAlignment="Left" Margin="14,480,0,76" ><Run Text="박자" FontSize="16"/></TextBlock>
+            <Grid Grid.Row="0">
+                <Label Margin="10" Content="프로젝트 정보" FontSize="24" FontWeight="Bold" />
+            </Grid>
 
-            <TextBox HorizontalAlignment="Left" Height="25" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="447" Margin="96,82,0,0"/>
-            <TextBox HorizontalAlignment="Left" Height="25" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="447" Margin="96,131,0,0"/>
-            <TextBox HorizontalAlignment="Left" Height="25" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="447" Margin="96,186,0,0"/>
-            <TextBox HorizontalAlignment="Left" Height="124" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="447" Margin="96,238,0,0"/>
+            <ScrollViewer Grid.Row="1" HorizontalScrollBarVisibility="Hidden" VerticalScrollBarVisibility="Auto">
+                <Grid Margin="10">
+                    <Grid.Resources>
+                        <Style x:Key="SettingsItem" TargetType="FrameworkElement">
+                            <Setter Property="Margin" Value="0,0,0,5" />
+                        </Style>
+                        <Style x:Key="SettingsHeader" TargetType="Label" BasedOn="{StaticResource SettingsItem}">
+                            <Setter Property="FontWeight" Value="Bold" />
+                        </Style>
+                    </Grid.Resources>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="auto" />
+                        <RowDefinition Height="auto" />
+                        <RowDefinition Height="auto" />
+                        <RowDefinition Height="auto" />
+                        <RowDefinition Height="auto" />
+                        <RowDefinition Height="auto" />
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="80" />
+                        <ColumnDefinition />
+                    </Grid.ColumnDefinitions>
 
-            <Image Width="40" Margin="96,374,417,189" Source="음표.png"/>
-            <Image Width="40" Margin="136,376,377,187" Source="등호.png"/>
+                    <Label Grid.Row="0" Grid.Column="0" Style="{StaticResource SettingsHeader}" Content="제목" />
+                    <Label Grid.Row="1" Grid.Column="0" Style="{StaticResource SettingsHeader}" Content="작곡가" />
+                    <Label Grid.Row="2" Grid.Column="0" Style="{StaticResource SettingsHeader}" Content="장르" />
+                    <Label Grid.Row="3" Grid.Column="0" Style="{StaticResource SettingsHeader}" Content="설명" />
+                    <Label Grid.Row="4" Grid.Column="0" Style="{StaticResource SettingsHeader}" Content="템포" />
+                    <Label Grid.Row="5" Grid.Column="0" Style="{StaticResource SettingsHeader}" Content="박자" />
 
-            <ComboBox IsEditable="True" Width="100" Margin="198,391,255,202" Height="26" RenderTransformOrigin="0.536,0.875">
-                <ComboBoxItem>100</ComboBoxItem>
-                <ComboBoxItem>120</ComboBoxItem>
-                <ComboBoxItem>140</ComboBoxItem>
-            </ComboBox>
-            <ComboBox IsEditable="True" Width="200" Margin="96,463,257,126" Height="30">
-                <ComboBoxItem>100</ComboBoxItem>
-                <ComboBoxItem>120</ComboBoxItem>
-                <ComboBoxItem>140</ComboBoxItem>
-            </ComboBox>
+                    <TextBox Grid.Row="0" Grid.Column="1" Style="{StaticResource SettingsItem}" />
+                    <TextBox Grid.Row="1" Grid.Column="1" Style="{StaticResource SettingsItem}" />
+                    <TextBox Grid.Row="2" Grid.Column="1" Style="{StaticResource SettingsItem}" />
+                    <TextBox Grid.Row="3" Grid.Column="1" Style="{StaticResource SettingsItem}"
+                             Height="100" TextWrapping="Wrap" AcceptsReturn="True"
+                             VerticalScrollBarVisibility="Visible"/>
+                    <Grid Grid.Row="4" Grid.Column="1" Style="{StaticResource SettingsItem}">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition />
+                            <ColumnDefinition Width="auto" />
+                        </Grid.ColumnDefinitions>
 
-            <Button Background="Gray" Width="80" Margin="463,390,10,199" BorderBrush="Gray" Content="템포 계산" FontSize="16"/>
-            <Button Background="Gray" Width="30" Margin="96,507,427,82" BorderBrush="Gray" Content="2" FontSize="16"/>
-            <Button Background="Gray" Width="30" Margin="152,507,371,82" BorderBrush="Gray" Content="4" FontSize="16" RenderTransformOrigin="-1.783,1.886"/>
-            <Button Background="Gray" Width="30" Margin="266,507,257,82" BorderBrush="Gray" Content="8" FontSize="16"/>
-            <Button Background="Gray" Width="30" Margin="208,507,315,82" BorderBrush="Gray" Content="16" FontSize="16"/>
-            <Button Background="Gray" Width="80" Margin="266,579,207,10" BorderBrush="Gray" Content="확인" FontSize="16"/>
-            <Button Background="Gray" Width="80" Margin="366,579,107,10" BorderBrush="Gray" Content="취소" FontSize="16"/>
-            <Button Background="Gray" Width="80" Margin="463,579,10,10" BorderBrush="Gray" Content="적용" FontSize="16"/>
+                        <StackPanel Grid.Column="0" Orientation="Horizontal">
+                            <TextBox Width="100" />
+                            <Label Content="BPM" />
+                        </StackPanel>
+
+                        <Button Grid.Column="1" Padding="15,3" Content="템포 계산" />
+                    </Grid>
+                    <Grid Grid.Row="5" Grid.Column="1">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="auto" />
+                            <RowDefinition Height="auto" />
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="auto" />
+                            <ColumnDefinition />
+                        </Grid.ColumnDefinitions>
+
+                        <Label Grid.Row="0" Grid.Column="0" Content="분자:" Style="{StaticResource SettingsItem}" />
+                        <Label Grid.Row="1" Grid.Column="0" Content="분모:" Style="{StaticResource SettingsItem}" />
+                        <TextBox Grid.Row="0" Grid.Column="1" Width="80" HorizontalAlignment="Left" Style="{StaticResource SettingsItem}" />
+                        <TextBox Grid.Row="1" Grid.Column="1" Width="80" HorizontalAlignment="Left" Style="{StaticResource SettingsItem}" />
+                    </Grid>
+                </Grid>
+            </ScrollViewer>
+
+            <StackPanel Grid.Row="2" Margin="5" DockPanel.Dock="Right" Orientation="Horizontal" HorizontalAlignment="Right">
+                <Button Margin="5" Padding="15,3" Content="확인" />
+                <Button Margin="5" Padding="15,3" Content="취소" />
+                <Button Margin="5" Padding="15,3" Content="적용" />
+            </StackPanel>
         </Grid>
     </Grid>
 </Window>
